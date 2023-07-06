@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //tag selector
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h3").hide();
+            })
+        })
+        //class selector
+        $(document).ready(function () {
+            $(".button").click(function () {
+                $(".para").hide();
+            })
+        })
+        //id selector
+        $(document).ready(function () {
+            $("#button").click(function () {
+                $("#para").hide();
+            })
+        })
+        //this selector
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $(this).hide();
+            })
+        })
+
+        $(document).ready(function () {
+            $(".hrefhider").click(function () {
+                $("[href]").hide();
+            })
+        })
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+</head>
+
+<body>
+    <h3>Test Paragraph(tag selector).</h3>
+    <button>Click here to hide paragraph</button>
+    <h1 class="para">Test Paragraph(class selector).</h1>
+    <button class="button">Click here to hide paragraph</button>
+    <h2 id="para">Test Paragraph(id selector).</h2>
+    <button id="button">Click here to hide paragraph</button>
+    <h2 id="para">Test Paragraph(this selector).</h2>
+    <button id="btn">Click here</button>
+
+    <p><a href="https://www.w3schools.com/html/">HTML Tutorial</a></p>
+    <p><a href="https://www.w3schools.com/css/">CSS Tutorial</a></p>
+
+    <button class="hrefhider">Click me</button>
+</body>
+
+</html>
