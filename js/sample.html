@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample Program</title>
+<script>
+function hi(){
+alert("Welcome To Tnxt!!");
+}
+function changeText(id){
+id.innerHTML="Ooops!";
+}
+
+</script>
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="red";
+  obj.innerHTML="Thank You";
+}
+
+
+</script>
+
+<script src="script.js"></script>
+</head>
+<body>
+<input type="button" value="Click here" onclick="hi()">
+<h1 style="background-color:red;  color:white; width:380px;height:20px;padding:40px;" onclick="this.innerHTML='Ooops!'">Click on the text!(Inline)</h1>
+<h1 style="background-color:red;  color:white; width:380px;height:20px;padding:40px;"onclick="changeText(this)">Click on the text!(Internal)</h1>
+<h1 style="background-color:red;  color:white; width:380px;height:20px;padding:40px;"onclick="changeText1(this)">Click on the text!(External)</h1>
+
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+
+<h1 onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:red;  color:white; width:380px;height:20px;padding:40px;">
+Mouse Over Me</h1>
+<h1 onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:red;  color:white; width:380px;height:20px;padding:40px;">
+Click Me</h1>
+
+<button id="myBtn">Try it</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", function() {
+  alert("Hello World!");
+});
+</script>
+</body>
+</html>
